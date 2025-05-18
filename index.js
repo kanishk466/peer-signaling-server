@@ -1,10 +1,12 @@
 // index.js
 const express = require('express');
 const { ExpressPeerServer } = require('peer');
+const dotenv = require('dotenv');
 const cors = require('cors');
+dotenv.config();
 
 const app = express();
-const PORT = 9000;
+const PORT = process.env.PORT || 9000;
 
 app.use(cors());
 
