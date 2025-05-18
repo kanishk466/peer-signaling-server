@@ -6,12 +6,12 @@ const cors = require('cors');
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 9000;
+const port = process.env.PORT || 9000;
 
 app.use(cors());
 
-const server = app.listen(PORT, () => {
-  console.log(`🔌 Peer server running at http://localhost:${PORT}`);
+const server = app.listen(port, () => {
+  console.log(`🔌 Peer server running at http://localhost:${port}`);
 });
 
 const peerServer = ExpressPeerServer(server, {
